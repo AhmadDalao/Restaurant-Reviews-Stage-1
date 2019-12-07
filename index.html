@@ -19,8 +19,8 @@
     </header>
 
     <main id="maincontent">
-        <section id="map-container">
-            <div id='map'></div>
+        <section id="map-container" aria-label="google map">
+            <div id="map" role="application"></div>
             <script>
                 mapboxgl.accessToken =
                     'pk.eyJ1Ijoic2hhZG93OGV2aWwiLCJhIjoiY2szdHJqNmh2MDVodDNrcW5sYXQ0cTVyZyJ9.sYiLYFOGFhn_fNkpd51THg';
@@ -47,6 +47,8 @@
     <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
     <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
 
+    <!-- Service Worker Registration the website should work offline now hopefully  -->
+    <script type="application/javascript" src="/sw_registration.js"></script>
 
 
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->

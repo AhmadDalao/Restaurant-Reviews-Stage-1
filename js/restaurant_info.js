@@ -78,6 +78,10 @@ fetchRestaurantFromURL = (callback) => {
 
 /**
  * Create restaurant HTML and add it to the webpage
+ * 
+ * I added the alternative text fore the image 
+ * 
+ * image.alt = restaurant.name + " Restaurant"
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
     const name = document.getElementById('restaurant-name');
@@ -89,6 +93,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     const image = document.getElementById('restaurant-img');
     image.className = 'restaurant-img'
     image.src = DBHelper.imageUrlForRestaurant(restaurant);
+    image.alt = restaurant.name + " Restaurant" //try me out.
 
     const cuisine = document.getElementById('restaurant-cuisine');
     cuisine.innerHTML = restaurant.cuisine_type;
@@ -100,6 +105,13 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     // fill reviews
     fillReviewsHTML();
 }
+
+
+
+
+
+
+
 
 /**
  * Create restaurant operating hours HTML table and add it to the webpage.
